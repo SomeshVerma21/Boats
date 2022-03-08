@@ -44,6 +44,7 @@
             app:layout_constraintTop_toBottomOf="@+id/idBoatName" />
 
         <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/idDeleteBoat"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_margin="20dp"

@@ -13,4 +13,7 @@ interface DatabaseDao {
 
     @Query("SELECT * FROM boatdatabase where boatId = :boatId")
     fun checkBoatInfo(boatId:String):List<BoatsEntity>
+
+    @Query("DELETE from boatdatabase where boatId = :boatId")
+    fun removeFromCollection(boatId: String)
 }

@@ -10,5 +10,14 @@ data class BoatsEntity(
     val uid:Int?,
 
     @ColumnInfo(name = "boatId")
-    val boatId:String
+    val boatId:String,
+
+    @ColumnInfo(name = "price")
+    val boatPrice:Int,
+
+    @ColumnInfo(name = "imgUrl")
+    val imgUrl:String,
+
+    @ColumnInfo(name = "name")
+    val name:String
 )

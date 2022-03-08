@@ -6,6 +6,7 @@ import android.view.Menu
 import android.view.MenuItem
 import com.infoware.boats.R
 import com.infoware.boats.mainUI.fragments.BoatListFragment
+import com.infoware.boats.mainUI.fragments.CollectionFragment
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,12 +23,17 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return super.onOptionsItemSelected(item)
         when(item.itemId){
             R.id.idMyCollection->{
-
+                supportFragmentManager.beginTransaction()
+                    .replace(R.id.idMainScreenFragmentContainer,CollectionFragment.newInstance())
+                    .setReorderingAllowed(true)
+                    .addToBackStack("collection")
+                    .commit()
             }
         }
+
+        return super.onOptionsItemSelected(item)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

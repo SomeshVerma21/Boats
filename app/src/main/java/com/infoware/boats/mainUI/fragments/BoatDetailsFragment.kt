@@ -60,6 +60,7 @@ class BoatDetailsFragment : Fragment() {
 
     private fun updateUI(data:Data)
     {
+        val name = data.cruise_name
         binding.idBoatName.text = data.cruise_name
         binding.boatPrice.text = "$"+data.cruise_price
         binding.idBoatWidth.text = data.cruise_width
@@ -78,7 +79,9 @@ class BoatDetailsFragment : Fragment() {
             binding.idAddToCollctionBtn.alpha = 0.5F
         }else{
             binding.idAddToCollctionBtn.setOnClickListener {
-                dataSource.addToCollection(BoatsEntity(null,data.id))
+                Toast.makeText(requireContext(),name,Toast.LENGTH_SHORT).show()
+                dataSource.addToCollection(BoatsEntity(null,data.id, boatPrice = data.cruise_price, imgUrl = data.cruise_thumb_img,
+                name = name))
                 binding.idAddToCollctionBtn.isActivated = false
                 binding.idAddToCollctionBtn.text = "Added to collection"
                 binding.idAddToCollctionBtn.alpha = 0.5F
