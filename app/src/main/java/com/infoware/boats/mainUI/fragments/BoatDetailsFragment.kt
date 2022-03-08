@@ -53,7 +53,7 @@ class BoatDetailsFragment : Fragment() {
                     shimmerView.visibility = View.GONE
                     binding.idDetailsLayout.visibility = View.VISIBLE
                     viewModel.resultData.value?.data?.let { it1 -> updateUI(it1) }
-                },1200)
+                },500)
             }
         })
     }
@@ -79,7 +79,6 @@ class BoatDetailsFragment : Fragment() {
             binding.idAddToCollctionBtn.alpha = 0.5F
         }else{
             binding.idAddToCollctionBtn.setOnClickListener {
-                Toast.makeText(requireContext(),name,Toast.LENGTH_SHORT).show()
                 dataSource.addToCollection(BoatsEntity(null,data.id, boatPrice = data.cruise_price, imgUrl = data.cruise_thumb_img,
                 name = name))
                 binding.idAddToCollctionBtn.isActivated = false

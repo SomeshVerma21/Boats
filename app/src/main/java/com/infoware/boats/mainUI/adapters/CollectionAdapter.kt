@@ -5,7 +5,6 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
@@ -35,7 +34,7 @@ class CollectionAdapter(private val context:Context, var list: MutableList<Boats
         return listData.size
     }
 
-     @SuppressLint("NotifyDataSetChanged")
+     @SuppressLint("NotifyDataSetChanged", "ResourceType")
      fun deleteItem(position:Int){
         dataSource.removeFromCollection(list[position].boatId)
         listData.removeAt(position)

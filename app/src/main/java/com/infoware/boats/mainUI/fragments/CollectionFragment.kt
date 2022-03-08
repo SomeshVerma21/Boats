@@ -31,7 +31,6 @@ class CollectionFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val recyclerView = binding.idCollectionList
         val list = dataSource.getALl() as MutableList
-        Toast.makeText(requireContext(),list.size.toString(),Toast.LENGTH_SHORT).show()
         val sorted = list.sortedBy { it.boatPrice }
         val adapter = CollectionAdapter(requireContext(), sorted as MutableList<BoatsEntity>,dataSource)
         recyclerView.layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.VERTICAL,false)
