@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".mainUI.fragments.BoatDetailsFragment">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/idShimmerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:duration="800"
+            android:visibility="visible"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <include layout="@layout/place_holder" />
+                <include layout="@layout/place_holder" />
+                <include layout="@layout/place_holder" />
+                <include layout="@layout/place_holder" />
+                <include layout="@layout/place_holder" />
+                <include layout="@layout/place_holder" />
+                <include layout="@layout/place_holder" />
+            </LinearLayout>
+        </com.facebook.shimmer.ShimmerFrameLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/idDetailsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible"
+            >
+            <ScrollView
+                android:id="@+id/scrollView2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="@+id/idAddToCollctionBtn"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/idMainThumbnailImg"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_launcher_background"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:layout_editor_absoluteX="56dp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/idBoatName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:text="Title"
+                        android:textColor="@color/black"
+                        android:textSize="30sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/idMainThumbnailImg" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/boatPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="15dp"
+                        android:text="$100"
+                        android:textColor="@color/black"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/idBoatName" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/idBoatDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:inputType="textMultiLine"
+                        android:maxLines="4"
+                        android:text="lsdlsdfsl dfls dflsdjf sjdlfjlsdfsd lfjls djfsdk"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="normal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/boatPrice" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/appCompatTextView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:text="Specifications"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/idBoatDescription" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/appCompatTextView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Width"
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        android:textStyle="normal"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/appCompatTextView3" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/appCompatTextView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Height"
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        android:textStyle="normal"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/appCompatTextView4" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/appCompatTextView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Speed"
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        android:textStyle="normal"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/appCompatTextView5" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/appCompatTextView8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Pax Capacity"
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        android:textStyle="normal"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/appCompatTextView6" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/idBoatWidth"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="100"
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        android:textStyle="normal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/appCompatTextView9"
+                        app:layout_constraintTop_toTopOf="@+id/appCompatTextView4" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/idBoatHight"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="25"
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        android:textStyle="normal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/appCompatTextView9"
+                        app:layout_constraintTop_toTopOf="@+id/appCompatTextView5" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/idBoatSpeed"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="40"
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        android:textStyle="normal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/appCompatTextView9"
+                        app:layout_constraintTop_toTopOf="@+id/appCompatTextView6" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/idBoatPaxCapacity"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="5"
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        android:textStyle="normal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/appCompatTextView9"
+                        app:layout_constraintTop_toTopOf="@+id/appCompatTextView8" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/appCompatTextView9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Caption Details"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/appCompatTextView8" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/appCompatTextView10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Name"
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        android:textStyle="normal"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/appCompatTextView9" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/appCompatTextView11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Email"
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        android:textStyle="normal"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/appCompatTextView10" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/appCompatTextView12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Mobile"
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        android:textStyle="normal"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/appCompatTextView11" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/idCaptionName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Verma JI"
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        android:textStyle="normal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/appCompatTextView9"
+                        app:layout_constraintTop_toTopOf="@+id/appCompatTextView10" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/idBoatCaptionEmail"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="com.janelaaj.com"
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        android:textStyle="normal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/appCompatTextView9"
+                        app:layout_constraintTop_toTopOf="@+id/appCompatTextView11" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/idBoatCaptionMobile"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="9999999999"
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        android:textStyle="normal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/appCompatTextView9"
+                        app:layout_constraintTop_toTopOf="@+id/appCompatTextView12" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </ScrollView>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/idAddToCollctionBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add to Collection"
+                android:background="@color/purple_500"
+                app:layout_constraintBottom_toBottomOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+
+
+</layout>
